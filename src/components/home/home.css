@@ -1,0 +1,126 @@
+#landing-page{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(26, 26, 26, 1);
+    position: relative;
+}
+
+#navbar{
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-inline: 2.5rem;
+
+}
+
+#logo-navbar{
+    font-weight: 800;
+    font-size: 2rem;
+    color: rgba(255, 174, 80, 1)
+}
+
+#logo-space{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#topics{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topico{
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+#nav-button{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#landing-page-text{
+    width: 50%;
+    height: 100%;
+    border-right: 2px solid orange;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: start;
+    box-sizing: border-box;
+    padding-left: 2.5rem;
+    position: relative;
+}
+
+#saudacao-landing-page{
+    color: #ffffff;
+    font-family: 'Zeyada', cursive;
+    font-size: 2.3rem;
+    margin: 0;
+    height: 1.5rem;
+}
+
+#nome-landing-page{
+    color: rgba(255, 174, 80, 1);
+    font-size: 5rem;
+    height: 6rem;
+    margin: 0;
+}
+
+#subtitulo-landing-page{
+    color: white;
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.negrito{
+    font-weight: 500;
+}
+
+#contatos-landing-page{
+    width: 25%;
+    position: absolute;
+    bottom: 2.5em;
+}
+
+#icones-contatos-landing-page{
+    width: 100%;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#fale-comigo-landing-page{
+    color: white;
+    font-weight: 200;
+    margin-bottom: .4em;
+}
+
+.icone-landing-page{
+    height: 1.5em;
+}

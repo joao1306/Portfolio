@@ -1,0 +1,6 @@
+#sobre{
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+    overflow-x: hidden;
+}
