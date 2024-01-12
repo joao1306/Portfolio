@@ -14,13 +14,13 @@
     justify-content: space-between;
     box-sizing: border-box;
     padding-inline: 2.5rem;
-
+    z-index: 9999;
 }
 
 #logo-navbar{
     font-weight: 800;
     font-size: 2rem;
-    color: rgba(255, 174, 80, 1)
+    color: rgba(255, 174, 80, 1);
 }
 
 #logo-space{
