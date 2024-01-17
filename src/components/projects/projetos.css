@@ -7,9 +7,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: hidden;
 }
 
 .skills{
+    margin-top: 2.5rem;
     margin-bottom: .4rem;
     font-size: 3.5rem;
 }
@@ -50,4 +52,82 @@
 #soft:hover{
     color: rgb(255, 174, 80);
     cursor: pointer;
+}
+
+.box-skills{
+    margin-top: 4vh;
+    width: 80vw;
+    height: 57vh;
+    display: flex;
+    justify-content: center;
+    align-items: row;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.skill{
+    width: 14rem;
+    height: 11rem;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.skill-icon{
+    margin-top: .1rem;
+    width: 20%;
+}
+
+.skill-text{
+    width: 90%;
+    height: 85%;
+    color: white;
+    font-weight: 200;
+    font-size: .65rem;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-title{
+    color: white;
+    margin:0;
+    font-weight: 450;
+}
+
+.display-logo{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-titulo{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-texto{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mysql{
+    width: 40%;
+}
+
+.node{
+    width: 30%;
 }
