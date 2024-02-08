@@ -1,0 +1,93 @@
+.pagina-contato{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(26, 26, 26, 1);
+    position: relative;
+}
+
+.div-imagem-contato{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lets-work{
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    font-size: 10rem;
+}
+
+#work{
+    color: rgb(255, 174, 80);
+}
+
+#imagem-contato{
+    width: 100%;
+
+}
+
+.div-links-contato{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#fale-comigo{
+    color: white;
+    font-size: 2rem;
+    margin-top: 5%;
+}
+
+#display-links{
+    width: 50%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 6rem;
+}
+
+.icone-contato{
+    height: 100%;
+}
+
+#portfolio-txt{
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    bottom: 2rem;
+}
+
+#desenvolvido-txt{
+    color: rgb(196, 196, 196);
+    margin: 0;
+    font-weight: 100;
+    position: absolute;
+    bottom: 1rem;
+}
+
+#bloco-branco-contato{
+    position: absolute;
+    top: -5rem;
+    right: 5rem;
+    width: 10rem;
+}
+
+#bloco-laranja-contato{
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    width: 7rem;
+}
