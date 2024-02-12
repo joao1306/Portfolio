@@ -15,7 +15,7 @@ import whitestairs from './logos/hard/whitestairs.svg';
 
 export default function Skills() {
   return (
-    <div id='projetos'>
+    <div id='id-pagina-skills'>
       <p className='titulo-secao skills'>SKILLS</p>
       <div id='box-hardsoft-button'>
         <button className='hard-soft-switch' id='hard'>Hard</button>
