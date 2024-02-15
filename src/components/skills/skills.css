@@ -56,15 +56,32 @@
     cursor: pointer;
 }
 
-.box-skills{
-    margin-top: 4vh;
+.box-hard-skills{
+    top: 35vh;
     width: 80vw;
     height: 57vh;
+    left: 10vw;
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: row;
     flex-wrap: wrap;
     gap: .5rem;
+    transition: all .7s ease;
+}
+
+.box-soft-skills{
+    top: 35vh;
+    width: 80vw;
+    height: 57vh;
+    right: -100vw;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: row;
+    flex-wrap: wrap;
+    gap: .5rem;
+    transition: all .7s ease;
 }
 
 .skill{
