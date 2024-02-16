@@ -201,39 +201,21 @@ export default function Skills() {
 
       {/* display de softskills */}
       <div className='box-soft-skills'>
-        <motion.div className='skill' ref={ref}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          style={{
-            transformStyle: "preserve-3d",
-          }}
-          animate={{
-            rotateX,
-            rotateY,
-          }}>
+        <div className='skill'>
 
-          <div className='display-logo' style={{
-            transform: "translateZ(75px)",
-            transformStyle: "preserve-3d",
-          }}>
+          <div className='display-logo'>
             <img src={react} className='skill-icon' />
           </div>
 
-          <div className='display-titulo' style={{
-            transform: "translateZ(75px)",
-            transformStyle: "preserve-3d",
-          }}>
+          <div className='display-titulo'>
             <h3 className='skill-title'>Inglês</h3>
           </div>
 
-          <div className='display-texto' style={{
-            transform: "translateZ(75px)",
-            transformStyle: "preserve-3d",
-          }}>
+          <div className='display-texto'>
             <p className='skill-text'>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
           </div>
 
-        </motion.div>
+        </div>
 
         <div className='skill'>
 

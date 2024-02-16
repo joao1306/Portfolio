@@ -94,6 +94,13 @@
     flex-direction: column;
     overflow: hidden;
     z-index: 2;
+    transition: all .3s ease;
+}
+
+.skill:hover{
+    width: 14.5rem;
+    height: 11rem;
+    background-color: rgb(48, 48, 48);
 }
 
 .skill-icon{
