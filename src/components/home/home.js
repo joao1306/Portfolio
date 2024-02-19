@@ -1,42 +1,154 @@
-import './home.css';
+import React, { useState, useEffect } from 'react';
 import github from './source/github.svg';
 import linkedin from './source/linkedin.svg';
 import instagram from './source/instagram.svg';
 import email from './source/email.svg';
-import React, {useState} from 'react';
-
+import './home.css';
 
 export default function Home() {
+    const [contadorSetor, setContadorSetor] = useState(0);
+    const [scrolling, setScrolling] = useState(false);
 
-    const [navbar, setNavbar] = useState('off');
+    useEffect(() => {
+        window.addEventListener("wheel", handleScroll);
 
-    function navbarToggle() {
+        return () => {
+            window.removeEventListener("wheel", handleScroll);
+        };
+    }, [contadorSetor, scrolling]);
 
-        let check = document.getElementById('topics');
+    // Função para detectar o scroll e atualizar o contador
+    function handleScroll(event) {
+        if (!scrolling) {
+            setScrolling(true);
 
-        if (check.classList.contains('off')) {
-            check.classList.remove('off');
-            check.classList.add('on');
-        } else {
-            check.classList.remove('on');
-            check.classList.add('off');
+            if (event.deltaY > 0) {
+                scrollDownFunction();
+            } else {
+                scrollUpFunction();
+            }
+
+            setTimeout(() => {
+                setScrolling(false);
+            }, 500);
         }
     }
 
+    // Função para rolar para baixo
+    function scrollDownFunction() {
+        if (contadorSetor < 4) {
+            setContadorSetor(contadorSetor + 1);
+        }
+    }
+
+    // Função para rolar para cima
+    function scrollUpFunction() {
+        if (contadorSetor > 0) {
+            setContadorSetor(contadorSetor - 1);
+        }
+    }
+
+    // Função para rolar para um elemento com base no valor do contador
+    function scrollToElement(id) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function cleanAll() {
+        let selUm = document.getElementById('t-home');
+        let selDois = document.getElementById('t-sobre');
+        let selTres = document.getElementById('t-skills');
+        let selQuatro = document.getElementById('t-projetos');
+        let selCinco = document.getElementById('t-contatos');
+
+        selUm.style.rotate = '45deg';
+        selUm.style.backgroundColor = 'rgba(255, 174, 80, 1)';
+        selUm.style.border = 'none';
+
+
+        selDois.style.rotate = '45deg';
+        selDois.style.backgroundColor = 'rgba(255, 174, 80, 1)';
+        selDois.style.border = 'none';
+
+
+        selTres.style.rotate = '45deg';
+        selTres.style.backgroundColor = 'rgba(255, 174, 80, 1)';
+        selTres.style.border = 'none';
+
+
+        selQuatro.style.rotate = '45deg';
+        selQuatro.style.backgroundColor = 'rgba(255, 174, 80, 1)';
+        selQuatro.style.border = 'none';
+
+
+        selCinco.style.rotate = '45deg';
+        selCinco.style.backgroundColor = 'rgba(255, 174, 80, 1)';
+        selCinco.style.border = 'none';
+
+    }
+
+    function active(id) {
+        let element = document.getElementById(id);
+
+        element.style.rotate = '0deg';
+        element.style.border = '2px rgba(255, 174, 80, 1) solid'
+        element.style.backgroundColor = 'transparent';
+    }
+
+    useEffect(() => {
+        switch (contadorSetor) {
+            case 0:
+                cleanAll()
+                scrollToElement('landing-page');
+                active('t-home')
+                break;
+            case 1:
+                cleanAll()
+                scrollToElement('sobre');
+                active('t-sobre')
+                break;
+            case 2:
+                cleanAll()
+                scrollToElement('id-pagina-skills');
+                active('t-skills')
+                break;
+            case 3:
+                cleanAll()
+                scrollToElement('id-pagina-projeto');
+                active('t-projetos')
+                break;
+            case 4:
+                cleanAll()
+                scrollToElement('id-pagina-contato');
+                active('t-contatos')
+                break;
+            default:
+                break;
+        }
+    }, [contadorSetor]);
+
+    console.log(contadorSetor)
+
     return (
         <div id='landing-page'>
-            {/* codigo responsavel pela barra de navegação */}
+            {/* codigo responsavel pelo cabecalho */}
             <div id='navbar'>
                 <div id='logo-space'>
                     <a href='#landing-page' id='logo-navbar'>Portfolio</a>
                 </div>
-                <div id='topics'>
-                    <a href='#sobre' className='topico'> Sobre</a>
-                    <a href='#id-pagina-skills' className='topico'> Skills</a>
-                    <a href='#id-pagina-projeto' className='topico'> Projetos</a>
-                    <a href='#id-pagina-contato' className='topico'> Contatos</a>
-                </div>
-                <button id='nav-button' onClick={navbarToggle}>=</button>
+                <button id='nav-button'></button>
+            </div>
+
+            {/* codigo responsavel pela barra de navegacao lateral */}
+
+            <div id='display-navbar'>
+                <a id='t-home' onClick={() => setContadorSetor(0)} ></a>
+                <a id='t-sobre' onClick={() => setContadorSetor(1)} ></a>
+                <a id='t-skills' onClick={() => setContadorSetor(2)} ></a>
+                <a id='t-projetos' onClick={() => setContadorSetor(3)} ></a>
+                <a id='t-contatos' onClick={() => setContadorSetor(4)} ></a>
             </div>
 
             {/* codigo da landing page */}

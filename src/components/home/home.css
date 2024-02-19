@@ -32,35 +32,6 @@
     align-items: center;
 }
 
-#topics {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    position: absolute;
-    right: 8rem;
-    transition: all .3s ease;
-}
-
-.off {
-    top: -4rem;
-    transition: all .3s ease;
-}
-
-.on {
-    transition: all .3s ease;
-}
-
-.topico {
-    color: white;
-    font-weight: 400;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
 
 #nav-button {
     width: 20px;
@@ -69,11 +40,72 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    background-color: transparent;
+    background-color: rgba(255, 174, 80, 1);
+    border-radius: 2rem;
     outline: none;
     border: none;
     color: white;
     cursor: pointer;
+    z-index: 99999999999;
+    transition: all .5s ease;
+}
+
+#display-navbar{
+    width: 30px;
+    height: 25vh;
+    position: fixed;
+    right: 2rem;
+    top: 37.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99999999999;
+}
+
+#t-home{
+    width: 12px;
+    height: 12px;
+    rotate: 45deg;
+    background-color: rgba(255, 174, 80, 1);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#t-sobre{
+    width: 12px;
+    height: 12px;
+    rotate: 45deg;
+    background-color: rgba(255, 174, 80, 1);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#t-skills{
+    width: 12px;
+    height: 12px;
+    rotate: 45deg;
+    background-color: rgba(255, 174, 80, 1);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#t-projetos{
+    width: 12px;
+    height: 12px;
+    rotate: 45deg;
+    background-color: rgba(255, 174, 80, 1);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#t-contatos{
+    width: 12px;
+    height: 12px;
+    rotate: 45deg;
+    background-color: rgba(255, 174, 80, 1);
+    cursor: pointer;
+    transition: all .2s ease;
 }
 
 #landing-page-text {
